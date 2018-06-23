@@ -2,8 +2,10 @@ import { AfterViewChecked, Component, Input, ViewEncapsulation } from '@angular/
 
 declare var ga: any;
 
+const selector = 'shop-analytics';
+
 @Component({
-  selector: 'shop-analytics',
+  selector,
   template: '',
   styles: [
     `:host {
@@ -14,6 +16,8 @@ declare var ga: any;
   encapsulation: ViewEncapsulation.Native,
 })
 export class AnalyticsComponent implements AfterViewChecked {
+
+  static get is(): string { return selector; }
 
   @Input() key: string;
 

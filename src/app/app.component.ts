@@ -13,8 +13,8 @@ export class AppComponent {
   title = 'shop';
 
   constructor(private injector: Injector) {
-    customElements.define('shop-analystics', createCustomElement(AnalyticsComponent, { injector }));
-    customElements.define('shop-cart-data', createCustomElement(ShopCartDataComponent, { injector }));
+    customElements.define(AnalyticsComponent.is, createCustomElement(AnalyticsComponent, { injector }));
+    customElements.define(ShopCartDataComponent.is, createCustomElement(ShopCartDataComponent, { injector }));
   }
 
 }
